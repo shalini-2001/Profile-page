@@ -22,6 +22,7 @@ $id=$loggedin_id;
 $sql="DELETE FROM member WHERE mem_id='$id'";
 $result=mysqli_query($con,$sql);
 if($result){
+ $sql = "INSERT INTO deleted_member(mem_id) values('$temp')";
  echo " <div align='center'>";
  echo "Account Deleted Sucessfully.";
  echo " <a href='index.php' >Click here</a> to go back. ";
